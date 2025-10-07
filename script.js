@@ -35,9 +35,9 @@ function printFoodRecommendation(foodName) {
 
 
 // 4b. Call the function at least 3 times
-printFoodRecommendation(myFavorites[3]);
-printFoodRecommendation(myFavorites[4]);
+printFoodRecommendation(myFavorites[0]);
 printFoodRecommendation(myFavorites[1]);
+printFoodRecommendation(myFavorites[2]);
 
 // Here's a list of 50 friends' favorite foods:
 let friendFavorites = [
