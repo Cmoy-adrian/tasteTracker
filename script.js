@@ -27,13 +27,17 @@ console.log("My #6 favorite food are Waffles");
     // "Have you ever tried ____?"
     // "I always recommend ____ to friends."
     // "Trust me — ____ is delicious."
-
-
+function printFoodRecommendation(foodName) {
+  console.log("Have you ever tried " + foodName + "?");
+  console.log("I always recommend " + foodName + " to my friends.");
+  console.log("Trust me - " + foodName + " is delicious.");
+};
 
 
 // 4b. Call the function at least 3 times
-
-
+printFoodRecommendation(myFavorites[3]);
+printFoodRecommendation(myFavorites[4]);
+printFoodRecommendation(myFavorites[1]);
 
 // Here's a list of 50 friends' favorite foods:
 let friendFavorites = [
