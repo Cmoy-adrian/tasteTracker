@@ -39,25 +39,36 @@ printFoodRecommendation(myFavorites[0]);
 printFoodRecommendation(myFavorites[1]);
 printFoodRecommendation(myFavorites[2]);
 
+
 // Here's a list of 50 friends' favorite foods:
 let friendFavorites = [
     "Pizza", "Sushi", "Pasta", "Falafel", "Burgers", "Ramen", "Pad Thai", "Curry", "Pho", "Nachos", "Gnocchi", "Donuts", "Steak", "Lasagna", "Biryani", "Tacos", "Croissant", "Churros", "Fried Rice", "Shawarma", "Miso Soup", "BBQ Ribs", "Hotpot", "Enchiladas", "Baklava", "Gyros", "Hummus", "Empanadas", "Pancakes", "Muffins", "Samosas", "Macarons", "Quiche", "Pierogi", "Arepas", "Okonomiyaki", "Ceviche", "Brisket", "Bao Buns", "Poutine", "Clam Chowder", "Fajitas", "Canelé", "Kimchi", "Tamales", "Omelette", "Biscuits", "Tempura", "Spring Rolls", "Crepes"
   ];
 
-// 5. Print out only foods that have an "a" in the name. For example, "Pizza" would not be included, but "Pasta" would be.
-
+// 5. Print out only foods that have an "a" in the name. For example, "Sushi" would not be included, but "Pasta" would be.
+for (let i=0; i < friendFavorites.length; i++) {
+  if (friendFavorites[i].includes("a")) {
+    console.log(friendFavorites[i]);
+  }
+};
 
 
 // 6. Store the result in an array called foodsWithA. Print out the array.
-
+let foodsWithA = [] // Empty array to store matches
+for (let i=0; i < friendFavorites.length; i++) {
+  if (friendFavorites[i].includes("a")) {
+    foodsWithA.push(friendFavorites[i]);
+  }
+};
+console.log(foodsWithA)
 
 
 // 7. Create a new array longFoodNames for foods with names longer than 6 characters.
-
+let longFoodNames = friendFavorites.filter(food => food.length > 6);
 
 
 // 8. Create another array shortFoodNames for foods 6 characters or shorter.
-
+let shortFoodNames = friendFavorites.filter(food => food.length < 6);
 
 
 // 9. Print both arrays and compare:
