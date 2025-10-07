@@ -1,11 +1,13 @@
 console.log("Hello World!");
 // 1. Create an array called favoriteFoods with at least 6 foods you love.
+
 let myFavorites = [
   "Popcorn", "Pizza","Spaghetti", "Burgers", "Waffles", "Tacos"
 ];
 
 
 // 2. Loop through the list and print: "One of my favorite foods is ______."
+
 for (let i=0; i < myFavorites.length; i++) {
   console.log("One of my favorite foods is " + myFavorites[i]);
 };
@@ -15,6 +17,7 @@ for (let i=0; i < myFavorites.length; i++) {
 // "My #1 favorite food is Ramen" (copy/paste for all items)
 // "My #2 favorite food is Sushi"
 // ...etc.
+
 console.log("My #1 favorite food are Burgers");
 console.log("My #2 favorite food are Tacos");
 console.log("My #3 favorite food is Pizza");
@@ -27,6 +30,7 @@ console.log("My #6 favorite food are Waffles");
     // "Have you ever tried ____?"
     // "I always recommend ____ to friends."
     // "Trust me — ____ is delicious."
+
 function printFoodRecommendation(foodName) {
   console.log("Have you ever tried " + foodName + "?");
   console.log("I always recommend " + foodName + " to my friends.");
@@ -35,17 +39,20 @@ function printFoodRecommendation(foodName) {
 
 
 // 4b. Call the function at least 3 times
+
 printFoodRecommendation(myFavorites[0]);
 printFoodRecommendation(myFavorites[1]);
 printFoodRecommendation(myFavorites[2]);
 
 
 // Here's a list of 50 friends' favorite foods:
+
 let friendFavorites = [
-    "Pizza", "Sushi", "Pasta", "Falafel", "Burgers", "Ramen", "Pad_Thai", "Curry", "Pho", "Nachos", "Gnocchi", "Donuts", "Steak", "Lasagna", "Biryani", "Tacos", "Croissant", "Churros", "Fried_Rice", "Shawarma", "Miso_Soup", "BBQ_Ribs", "Hotpot", "Enchiladas", "Baklava", "Gyros", "Hummus", "Empanadas", "Pancakes", "Muffins", "Samosas", "Macarons", "Quiche", "Pierogi", "Arepas", "Okonomiyaki", "Ceviche", "Brisket", "Bao_Buns", "Poutine", "Clam_Chowder", "Fajitas", "Canelé", "Kimchi", "Tamales", "Omelette", "Biscuits", "Tempura", "Spring_Rolls", "Crepes"
+    "Pizza", "Sushi", "Pasta", "Falafel", "Burgers", "Ramen", "Pad Thai", "Curry", "Pho", "Nachos", "Gnocchi", "Donuts", "Steak", "Lasagna", "Biryani", "Tacos", "Croissant", "Churros", "Fried Rice", "Shawarma", "Miso Soup", "BBQ Ribs", "Hotpot", "Enchiladas", "Baklava", "Gyros", "Hummus", "Empanadas", "Pancakes", "Muffins", "Samosas", "Macarons", "Quiche", "Pierogi", "Arepas", "Okonomiyaki", "Ceviche", "Brisket", "Bao Buns", "Poutine", "Clam Chowder", "Fajitas", "Canelé", "Kimchi", "Tamales", "Omelette", "Biscuits", "Tempura", "Spring Rolls", "Crepes"
   ];
 
 // 5. Print out only foods that have an "a" in the name. For example, "Sushi" would not be included, but "Pasta" would be.
+
 for (let i=0; i < friendFavorites.length; i++) {
   if (friendFavorites[i].includes("a")) {
     console.log(friendFavorites[i]);
@@ -54,6 +61,7 @@ for (let i=0; i < friendFavorites.length; i++) {
 
 
 // 6. Store the result in an array called foodsWithA. Print out the array.
+
 let foodsWithA = [] // Empty array to store matches
 for (let i=0; i < friendFavorites.length; i++) {
   if (friendFavorites[i].includes("a")) {
@@ -64,15 +72,18 @@ console.log(foodsWithA)
 
 
 // 7. Create a new array longFoodNames for foods with names longer than 6 characters.
+
 let longFoodNames = friendFavorites.filter(food => food.length > 6);
 
 
 // 8. Create another array shortFoodNames for foods 6 characters or shorter.
+
 let shortFoodNames = friendFavorites.filter(food => food.length < 6);
 
 
 // 9. Print both arrays and compare:
 // "There are more long-named foods." OR "There are more short-named foods."
+
 console.log("Long food names: " + longFoodNames);
 console.log("Short food names: " + shortFoodNames);
 
@@ -85,3 +96,11 @@ if (longFoodNames.length > shortFoodNames.length) {
 
 // 10. STRETCH: Find the longest food name and print:
 // "The longest food name in the list is ______ with ___ characters."
+
+let longest = friendFavorites[0] // Start with first name in array.
+for (let i=0; i < friendFavorites.length; i++) {
+  if (friendFavorites[i].length > longest.length) {
+    longest = friendFavorites[i];
+  }
+};
+console.log("The longest food name in the list is " + longest + " with " + longest.length + " characters.")
