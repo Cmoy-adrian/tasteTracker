@@ -42,7 +42,7 @@ printFoodRecommendation(myFavorites[2]);
 
 // Here's a list of 50 friends' favorite foods:
 let friendFavorites = [
-    "Pizza", "Sushi", "Pasta", "Falafel", "Burgers", "Ramen", "Pad Thai", "Curry", "Pho", "Nachos", "Gnocchi", "Donuts", "Steak", "Lasagna", "Biryani", "Tacos", "Croissant", "Churros", "Fried Rice", "Shawarma", "Miso Soup", "BBQ Ribs", "Hotpot", "Enchiladas", "Baklava", "Gyros", "Hummus", "Empanadas", "Pancakes", "Muffins", "Samosas", "Macarons", "Quiche", "Pierogi", "Arepas", "Okonomiyaki", "Ceviche", "Brisket", "Bao Buns", "Poutine", "Clam Chowder", "Fajitas", "Canelé", "Kimchi", "Tamales", "Omelette", "Biscuits", "Tempura", "Spring Rolls", "Crepes"
+    "Pizza", "Sushi", "Pasta", "Falafel", "Burgers", "Ramen", "Pad_Thai", "Curry", "Pho", "Nachos", "Gnocchi", "Donuts", "Steak", "Lasagna", "Biryani", "Tacos", "Croissant", "Churros", "Fried_Rice", "Shawarma", "Miso_Soup", "BBQ_Ribs", "Hotpot", "Enchiladas", "Baklava", "Gyros", "Hummus", "Empanadas", "Pancakes", "Muffins", "Samosas", "Macarons", "Quiche", "Pierogi", "Arepas", "Okonomiyaki", "Ceviche", "Brisket", "Bao_Buns", "Poutine", "Clam_Chowder", "Fajitas", "Canelé", "Kimchi", "Tamales", "Omelette", "Biscuits", "Tempura", "Spring_Rolls", "Crepes"
   ];
 
 // 5. Print out only foods that have an "a" in the name. For example, "Sushi" would not be included, but "Pasta" would be.
@@ -73,6 +73,14 @@ let shortFoodNames = friendFavorites.filter(food => food.length < 6);
 
 // 9. Print both arrays and compare:
 // "There are more long-named foods." OR "There are more short-named foods."
+console.log("Long food names: " + longFoodNames);
+console.log("Short food names: " + shortFoodNames);
+
+if (longFoodNames.length > shortFoodNames.length) {
+  console.log("There are more long-named foods.");
+} else if (longFoodNames.length < shortFoodNames.length) {
+  console.log("There are more short-named foods.");
+};
 
 
 // 10. STRETCH: Find the longest food name and print:
